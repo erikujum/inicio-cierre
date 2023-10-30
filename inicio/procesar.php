@@ -8,9 +8,9 @@ if (!empty($_POST['nickname']) && !empty($_POST['password'])) {
         echo 'Bienvenido';
     } else {
         $error = "incorrecto";
-        header("Location: inicio.php?error=$error");
+        header("Location: index.php?error=$error");
     }
 } else {
     $error = "vacio";
-    header("Location: inicio.php?error=$error");
+    header("Location: index.php?error=$error");
 }
