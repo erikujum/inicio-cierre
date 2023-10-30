@@ -42,8 +42,8 @@ if (!isset($_SESSION['usuario'])) {
 </head>
 
 <body>
-    <h2>Esta es la página restringida 🚀</h2>
-    <p>¡Bienvenido a esta página restringida! Puedes personalizar su contenido aquí.</p>
+    <h2>Bienvenido.</h2>
+    <p>¡Bienvenido.</p>
     <a href="logout.php">Salir</a>
 </body>
 </html>
