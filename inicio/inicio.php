@@ -58,11 +58,11 @@
 <body>
     <h2>Inicio de sesión 📩</h2>
     <form action="procesar.php" method="POST">
-        <p><label for="nickname">Usuario: </label>
+        <p><label for="nickname">🙍Usuario🙍‍♀️: </label>
             <input type="text" name="nickname"><br>
         </p>
 
-        <p><label for="password">Contraseña: </label>
+        <p><label for="password">Contraseña🪄: </label>
             <input type="password" name="password"><br>
         </p>
 

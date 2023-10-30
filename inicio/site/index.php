@@ -11,12 +11,20 @@ init();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        botonSalir {
+            text-align: center;
+            color-scheme: rebeccapurple;
+        }
+    </style>
 </head>
+
 <body>
-    <a href="../logout.php">Salir</a>
+    <button id="botonSalir" onclick="window.location.href = '../logout.php'"> Salir 👽 </button>
 </body>
+
 </html>
