@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,29 +12,35 @@
 </head>
 
 <body>
-    <h2> Inicio de sesión 📩</h2>
+    <?php
+    if (isset($_SESSION['usuario'])) {
+        echo '<h2>Bienvenido, ' . $_SESSION['usuario'] . '</h2>';
+        echo '<a href="logout.php">Cerrar Sesión</a>';
+    } else {
+    ?>
+    <h2>Inicio de sesión 📩</h2>
     <form action="procesar.php" method="POST">
         <p><label for="nickname">Usuario: </label>
             <input type="text" name="nickname"><br>
         </p>
 
         <p><label for="password">Contraseña: </label>
-            <input type="text" name="password"><br>
+            <input type="password" name="password"><br>
         </p>
 
         <p><input type="submit" value="Acceder"></p>
     </form>
-</body>
 
-<?php
-if (isset($_GET['error'])) {
-    $error = $_GET['error'];
-    if ($error == "incorrecto") {
-        echo "<h2> El usuario o contraseña son incorrectos</h2>";
-    } else if ($error == "vacio") {
-        echo "<h2> campos vacios </h2>";
+    <?php
+    if (isset($_GET['error'])) {
+        $error = $_GET['error'];
+        if ($error == "incorrecto") {
+            echo "<h2>El usuario o contraseña son incorrectos</h2>";
+        } else if ($error == "vacio") {
+            echo "<h2>Campos vacíos</h2>";
+        }
     }
-}
-?>
-
+    }
+    ?>
+</body>
 </html>
