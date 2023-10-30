@@ -7,14 +7,14 @@ if (!empty($_POST['nickname']) && !empty($_POST['password'])) {
         $_SESSION['usuario'] = $nickname;
         session_start();
         if (isset($_SESSION['usuario'])) {
-            header("Location: bienvenido.php");
+            header("Location: site/index.php");
             exit();
         }
     } else {
         $error = "incorrecto";
-        header("Location: index.php?error=$error");
+        header("Location: inicio.php?error=$error");
     }
 } else {
     $error = "vacio";
-    header("Location: index.php?error=$error");
+    header("Location: inicio.php?error=$error");
 }
