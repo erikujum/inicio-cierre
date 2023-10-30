@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,12 +8,6 @@ session_start();
 </head>
 
 <body>
-    <?php
-    if (isset($_SESSION['usuario'])) {
-        echo '<h2>Bienvenido, ' . $_SESSION['usuario'] . '</h2>';
-        echo '<a href="logout.php">Cerrar Sesión</a>';
-    } else {
-    ?>
     <h2>Inicio de sesión 📩</h2>
     <form action="procesar.php" method="POST">
         <p><label for="nickname">Usuario: </label>
@@ -40,7 +30,7 @@ session_start();
             echo "<h2>Campos vacíos</h2>";
         }
     }
-    }
     ?>
 </body>
+
 </html>
